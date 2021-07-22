@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+    color:black;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+aside{
+    background-color: black;
+    text-align: center;
+    padding-bottom:40px;
+}
+aside img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+aside h1{
+    text-transform: uppercase;
+    color: white;
+}
+aside p{
+    color: gray;
+}
+main{
+    text-align: center;
+    color: black;
+}
+main h1{
+    font-size: 40px;
+}
+
+
+
+.images img{
+    width: 80%;
+    display: block;
+    margin: 10% auto;
+    margin-bottom:0px;
+}
+.images figcaption{
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    margin-top:4%;
+}
+footer{
+    margin-top: 5%;
+}
+footer p{
+    text-align: center;
+}
+
+
+@media (min-width:720px) and (max-width:900px){
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas: 
+    "aside main"
+    "aside footer"
+}
+aside{
+    grid-area: aside;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area:footer
+}
+
+
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figure{
+    width: 100%;
+}
+
+.images figcaption{
+    font-size: 20px;
+}
+
+}
+
+@media (min-width:900px){
+    .container{
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows:1fr 100px;
+        grid-template-areas:
+        "aside main"
+        "aside footer";
+    }
+    aside{
+        grid-area:aside
+    }
+    main{
+        grid-area:main
+    }
+
+    footer{
+        grid-area:footer
+    }
+    
+
+    .images{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px,2fr));
+        grid-template-rows: 1fr 1fr;  
+    }
+
+    aside {
+        font-size: 20px;
+        text-align: left;
+    }
+    aside h1{
+        font-size: 23px;
+    }
+
+
+
+    .images figcaption{
+        font-size: 15px;
+    }
+
+    .images{
+        /* border: 2px solid red; */
+        width: 100%;
+    }
+    figure{
+        /* border: 2px solid red; */
+        width: 100%;
+        margin: auto;
+    }
+    
+}
+
+
+
+
+
+

@@ -1,0 +1,245 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+    color:black;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.back{
+    display: none;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding-bottom: 40px;
+}
+
+aside img{
+    width: 50%;
+}
+
+aside h1{
+    text-transform: uppercase;
+    color: white;
+}
+
+aside p{
+    color: gray;
+    text-align: center;
+}
+
+main{
+    text-align: center;
+    width: 100%;
+}
+main p{
+    font-size: 23px;
+}
+.image{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    width: 90%;
+}
+
+
+.tehnology{
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tehnology button{
+    padding: 10px 70px;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.tehnology .hub{
+    padding: 10px 60px;
+}
+
+footer{
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    font-size: 30px;
+    color:blue;
+    cursor: pointer;
+}
+footer p{
+    font-size: 25px;
+}
+
+
+@media (min-width:720px) and (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 50px 200px 1fr 400px 120px;
+        grid-gap:20px;
+        grid-template-areas: 
+        "aside back"
+        "aside main"
+        "aside image"
+        "aside tehnology"
+        "aside footer";
+    }
+
+    .back{
+        grid-area: back;
+    }
+
+    aside{
+        grid-area: aside;
+    }
+    main{
+        grid-area: main;
+    }
+    .image{
+        grid-area: image;
+    }
+    .tehnology{
+        grid-area: tehnology;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .back{
+        display: inline;
+        margin-left:5%;
+        margin-top: 5%;
+    }
+    .back a{
+        text-decoration: none;
+        font-size: 30px;
+        color:black;
+        cursor: pointer;
+        color:blue;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .image{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .image img{
+        width: 90%;
+    }
+
+    .tehnology{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    footer a{
+        float: left;
+    }
+
+}
+
+@media(min-width:900px){
+  .container{
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 70px 1fr 2fr 200px;
+      grid-template-areas: 
+      "aside back back"
+      "aside main tehnology"
+      "aside image image"
+      "aside footer footer";
+  }
+  .back{
+      grid-area: back;
+  }
+
+  aside{
+      grid-area: aside;
+  }
+  .image{
+      grid-area: image;
+  }
+  main{
+      grid-area: main;
+  }
+
+  .tehnology{
+      grid-area: tehnology;
+  }
+
+  footer{
+      grid-area: footer;
+  }
+
+  aside{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+  .back{
+    display: inline;
+    margin-left:5%;
+    margin-top: 5%;
+}
+.back a{
+    text-decoration: none;
+    font-size: 30px;
+    color:black;
+    cursor: pointer;
+    color:blue;
+}
+
+main{
+    width: 80%;
+    margin:10%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.image img{
+    width: 90%;
+}
+
+footer a{
+    float: left;
+    margin-left: 5%;
+}
+
+
+}
